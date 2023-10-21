@@ -1,0 +1,123 @@
+body{
+    background-color: rgb(59, 58, 58);
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding: 40px 40px 0px 40px;
+}
+/* header */
+.link{
+    text-decoration: none;
+    color: white;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+}
+.header__links{
+    display: flex;
+    align-items: center;
+}
+.header__inner{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header__link{
+    padding: 0px 20px 0px 20px;
+}
+.header__profile{
+    color: white;
+}
+.header-menu--search{
+    width: 70px;
+    border-radius: 10px;
+    border: none;
+}
+.header-menu--sign-up{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+.header-menu--sign-up:hover{
+    background-color: rgb(163, 150, 150);
+}
+.header__bread-crumbs{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: grey;   
+    height: 30px;
+    
+}
+.main-row{
+    display: flex;
+    flex-direction: row;
+}
+/* saibar */
+.saidbar{
+    overflow-y: scroll;
+    color: white;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.saidbar__title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.saidbar__links{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+/* article */
+.article{
+    padding-right: 30px;
+    text-align:center;
+    color: white;
+
+}
+/* document-toc */
+.document-toc{
+  width: 30%;  
+  color: white;
+  height: max-content;
+  border-left: 1px solid white;
+  
+}
+.document-toc__indent{
+    margin-left: 5%;
+}
+.document-toc__link{
+    display: flex;
+    flex-direction:column ;
+    padding-bottom: 30px;
+    
+}
+/* footer */
+.footer{
+    color: white;
+    display: flex;
+    background-color: gray;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-nav-col{
+    display: flex;
+    
+}
+.footer-nav-col__list{
+    list-style: none;
+    padding: 0px 50px;
+}
+.footer-nav-col__links{
+    display: flex;
+    flex-direction: column;
+}

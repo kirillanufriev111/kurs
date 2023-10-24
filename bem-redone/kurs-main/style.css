@@ -1,0 +1,186 @@
+body {
+    background-color: rgb(59, 58, 58);
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper__header {
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.link--default {
+    text-decoration: underline;
+}
+
+/* header */
+.header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header__logo {
+    height: 64px;
+    width: 160px;
+}
+
+.header__link {
+    padding: 0 20px 0 20px;
+}
+
+.header-menu {
+    color: white;
+}
+
+
+.header-menu__search-bar {
+    width: 70px;
+    border-radius: 10px;
+    border: none;
+}
+
+.header-menu__sign-up-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.header-menu__sign-up-btn:hover {
+    background-color: rgb(163, 150, 150);
+}
+
+.bread-crumbs {
+    background-color: grey;
+    line-height: 28px;
+}
+
+.bread-crumbs__content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.main-row {
+    display: flex;
+    flex-direction: row;
+}
+
+/* saibar */
+.saidbar {
+    overflow-y: scroll;
+    color: white;
+    width: 30%;
+}
+.saidbar__content{
+    display: flex;
+    flex-direction: column;
+}
+
+.saidbar__title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.saidbar__links {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+/* article */
+.article {
+    text-align: center;
+    color: white;
+}
+.article__content{
+    padding-right: 30px;
+}
+.article__title{
+    color: rgb(46, 33, 33);
+    font-weight: bold;
+    
+}
+/* document-toc */
+.document-toc {
+    width: 30%;
+    height: max-content;
+    border-left: 1px solid white;
+    color: white;
+}
+
+.document-toc__indent {
+    margin-left: 5%;
+}
+
+.document-toc__link {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+
+}
+
+/* footer */
+.footer {
+    padding: 20px;
+    color: white;
+    
+}
+.footer__content{
+    display: flex;
+    background-color: gray;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-nav-col {
+    display: flex;
+}
+
+.footer-nav-col__list {
+    list-style: none;
+}
+.footer-nav-list{
+    padding: 0 50px;
+}
+
+.footer-nav-list__links {
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+}

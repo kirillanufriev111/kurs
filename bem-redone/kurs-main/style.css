@@ -84,9 +84,14 @@ p {
     margin: 0 auto;
 }
 
-.main-row {
+.main {
     display: flex;
     flex-direction: row;
+}
+
+.main__container {
+    margin: 0 auto;
+    display: flex;
 }
 
 /* saibar */

@@ -93,7 +93,7 @@ p {
 .saidbar {
     overflow-y: scroll;
     color: white;
-    width: 60%;
+    width: 60%; /* Внешняя геометрия у блока. Я бы настоятельно рекомендовал избавиться от таких способов задания ширины (в процентах). Тут они совсем не нужны (ширину у сайдбаров и контента можно не задавать вообще). Правильно было бы задать классу main-row свойство grid-template-columns   */
 }
 
 .saidbar__content {
@@ -130,14 +130,14 @@ p {
 
 /* document-toc */
 .document-toc {
-    width: 30%;
+    width: 30%; /* Внешняя геометрия у блока*/
     height: max-content;
     border-left: 1px solid white;
     color: white;
 }
 
 .document-toc__indent {
-    margin-left: 5%;
+    margin-left: 5%; /* Лучше фиксированные отступы отказывать. Px, rem. % ненадежные в этом плане. Можешь подсмотреть у MDN какие они отступы задают*/
 }
 
 .document-toc__link {
@@ -253,17 +253,17 @@ p {
     position: relative;
     background-color: #333131;
     border-radius: 10px;
-    margin:100px;
+    margin:100px; /* Внешняя геометрия у блока*/
     margin-left: 50%;
     margin-top: 50%;
     transform: translate(-50%, -50%);
     padding: 100px;
-    width: 400px;
+    width: 400px; /* Внешняя геометрия у блока*/
     text-align: center;
 }
 
 .close {
-    position: absolute;
+    position: absolute;/* Внешняя геометрия у блока*/
     top: 10px;
     right: 10px;
     font-size: 20px;

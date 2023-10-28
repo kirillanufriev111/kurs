@@ -1,0 +1,320 @@
+body {
+    background-color: rgb(59, 58, 58);
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper__header {
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.link--default {
+    text-decoration: underline;
+}
+
+/* header */
+.header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header__logo {
+    height: 64px;
+    width: 160px;
+}
+
+.header__link {
+    padding: 0 20px 0 20px;
+}
+
+.header-menu {
+    color: white;
+}
+
+
+.header-menu__search-bar {
+    width: 70px;
+    border-radius: 10px;
+    border: none;
+}
+
+.header-menu__sign-up-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.header-menu__sign-up-btn:hover {
+    background-color: rgb(163, 150, 150);
+}
+
+.bread-crumbs {
+    background-color: grey;
+    line-height: 28px;
+}
+
+.bread-crumbs__content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.main-row {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: minmax(0,2fr) minmax(0,10fr) minmax(0,1fr);
+}
+
+/* saibar */
+.saidbar {
+    overflow-y: scroll;
+    color: white;
+    
+     /* Внешняя геометрия у блока. Я бы настоятельно рекомендовал избавиться от таких способов задания ширины (в процентах). Тут они совсем не нужны (ширину у сайдбаров и контента можно не задавать вообще). Правильно было бы задать классу main-row свойство grid-template-columns   */
+}
+
+.saidbar__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.saidbar__title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.saidbar__links {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+/* article */
+.article {
+    text-align: center;
+    color: white;
+}
+
+.article__content {
+    padding-right: 30px;
+}
+
+.article__title {
+    color: rgb(46, 33, 33);
+    font-weight: bold;
+
+}
+
+/* document-toc */
+.document-toc {
+    /* Внешняя геометрия у блока*/
+    height: max-content;
+    border-left: 1px solid white;
+    color: white;
+}
+
+.document-toc__indent {
+    /* Лучше фиксированные отступы отказывать. Px, rem. % ненадежные в этом плане. Можешь подсмотреть у MDN какие они отступы задают*/
+}
+
+.document-toc__link {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+
+}
+.wrapper__main{
+    margin: 0 auto;
+}
+
+
+/* footer */
+.footer {
+    padding: 20px;
+    color: white;
+
+}
+
+.footer__content {
+    display: flex;
+    background-color: gray;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-nav-col {
+    display: flex;
+}
+
+.footer-nav-col__list {
+    list-style: none;
+}
+
+.footer-nav-list {
+    padding: 0 50px;
+}
+
+.footer-nav-list__links {
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+}
+
+/*  */
+.display-none {
+    display: none;
+}
+/* adaptiv */
+@media screen and (max-width:1000px) {
+    .document-toc__indent {
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        color: white;
+    }
+
+    .document-toc {
+        display: none;
+    }
+}
+@media screen and (max-width:860px){
+    .header-menu{
+        display: none;
+        
+    }
+    .header__links{
+        display: none;
+    }
+    
+}
+@media screen and (min-width:860px){
+    .open-button{
+        display: none;
+    }
+}
+@media screen and (max-width:720px){
+    .saidbar{
+        display: none;
+    }
+    .main-row {
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .footer-nav-col{
+        
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+    
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    
+    background-color: #333131;
+    border-radius: 10px;
+    /* Внешняя геометрия у блока*/
+    
+    transform: translate(-50%, -50%);
+    padding: 100px;
+    /* Внешняя геометрия у блока*/
+    text-align: center;
+}
+.content__modal{
+    margin:100px;
+    width: 400px;
+    margin-left: 50%;
+    margin-top: 50%;
+}
+
+.modal__close {
+    position: absolute;/* Внешняя геометрия у блока*/
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* button content */
+.button-menu__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.button-menu{
+    display: flex;
+    justify-content: center;
+    
+}
+.button-menu__sign-up-btn{
+    width: 150px;
+    padding:10px;
+    margin-left: 50px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+}
+.button-menu__search-bar{
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+}
+.button__links{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+.button__link{
+    border-bottom: 1px solid;
+    font-size: 20px;
+    padding: 10px;
+}

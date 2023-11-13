@@ -14,7 +14,8 @@
             <div class="input-control">
                 <label class="input-control__label" for="username">ФИО*</label>
                 <input class="input-control__input" maxlength="150" id="username" name="username" type="text">
-                <div class="error"></div>
+                <div class="error"></div> <!-- Вот так делать опасно. Может быть такое что div добавится в DOM и будет отображаться в html даже не имея контента (будет просто пустая полоса после контрола)-->
+                <!-- лучше все же создавать элемент напрямую в JS, когда есть ошибкаю-->
             </div>
             <div class="input-control">
                 <label class="input-control__label" for="email">Email*</label>
@@ -38,9 +39,9 @@
                     Я подтверждаю что хочу зарегестрироваться
                     <div class="error"></div>
                 </label>
-                
+
             </div>
-                
+
             <button class="form__sumbit" type="submit">Отправить</button>
         </form>
     </div>

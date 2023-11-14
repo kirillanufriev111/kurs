@@ -2,7 +2,7 @@ const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+const password2 = document.getElementById('password2'); /* Название плохое. Это password confirmation. Что значит Password2?*/
 const confirmCheckbox = document.getElementById('confirmCheckbox');
 
 form.addEventListener('submit', e => {
@@ -41,6 +41,11 @@ const validateInputs = () => {
     const passwordValue = password.value.trim();
     const password2Value = password2.value.trim();
 
+    /*
+        Я бы советовал вынести возможные проверки по функциям. Например, проверку На наличие значения isNonEmpty и тп). Так будет проще тестить и меньше копипасты.
+        Ты сделал, так с емейлом, так почему бы не сделать так же с другими правилами?
+        + можно вынести проверку каждого контрола в отдельную функцию, а то функция уж больно много всего делает (тут уже больше к чистоте кода отсылаюсь, нежели к фронту)
+        */
     if (usernameValue === '') {
         setError(username, 'Введите имя пользователя');
     } else {
@@ -64,7 +69,7 @@ const validateInputs = () => {
         setError(password, 'Введите пароль');
     } else if (!/[0-9@:-]/.test(passwordValue)) {
         setError(password, 'Пароль должен содержать хотя-бы 1 не буквенный символ')
-    } else if (passwordValue.length < 8) {
+    } else if (passwordValue.length < 8) { /* Хорошей практикой считается вынос числовых/символьных констант в отдельные переменные (в SCREAMING_SNAKE_CASE нотации)*/
         setError(password, 'Пароль должен содержать не менее 8 символов.')
     } else if (passwordValue.length > 30) {
         setError(password, 'Пароль должен содержать не больше 30 символов.')
@@ -87,6 +92,11 @@ const validateInputs = () => {
     if (usernameValue.length > 150) {
         setError(username, 'Фио должен содержать не больше 150 символов')
     }
+
+    /*
+     По хорошему, эти проверки тут не нужны, хватит одной переменной isFormValid. Если хотя бы одна проверка выше не пройдет, то  isFormValid будет false и этот блок не выполнится
+    + в том что сейчас тут написано смысла немного поскольку наличие значения проверяется выше и тут не учитываются другие правилв
+    */
     if (usernameValue !== '' && emailValue !== '' && passwordValue !== '' && password2Value !== '' && confirmCheckbox.checked) {
         localStorage.setItem('username', usernameValue);
         localStorage.setItem('email', emailValue);
